@@ -1,0 +1,20 @@
+{
+    "name": "your-name-here/Demo",
+    "description": "Demo plugin for CakePHP",
+    "type": "cakephp-plugin",
+    "require": {
+        "php": ">=5.4.16"
+    },
+    "autoload": {
+        "psr-4": {
+            "Demo\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Demo\\Test\\": "tests",
+            "Cake\\Test\\": "./vendor/cakephp/cakephp/tests"
+        }
+    }
+}
+

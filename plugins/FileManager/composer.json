@@ -1,0 +1,20 @@
+{
+    "name": "icingcms/FileManager",
+    "description": "FileManager plugin for CakePHP",
+    "type": "cakephp-plugin",
+    "require": {
+        "league/flysystem": "^1.0",
+        "league/flysystem-aws-s3-v3": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "FileManager\\": "src"
+	}
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "FileManager\\Test\\": "tests",
+            "Cake\\Test\\": "./vendor/cakephp/cakephp/tests"
+        }
+    }
+}

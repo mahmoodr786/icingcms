@@ -1,0 +1,223 @@
+
+/** Mixins */
+@mixin transition-background() {
+    -webkit-transition: background 0.50s;
+    -moz-transition: background 0.50s;
+    transition: background 0.50s;
+}
+/** Body */
+body{
+	background: url(../img/loginbg.png);
+}
+/** Navbar */
+.navbar{
+	&.clear-nav{
+		@include transition-background;
+		background: transparent;
+		border-color: transparent;
+		.navbar-brand{
+			color: #fff;
+		}
+		.nav{
+			>li>a{
+				color: #fff;
+			}
+			.active{
+				a{
+					background: transparent;
+				}
+			}
+		}
+	}
+	.brand{
+		font-family: $headings-font-family;
+	}
+}
+/** Wrapper and Homepage */
+.wrapper{
+	margin-top: 50px;
+}
+.jombo{
+	color: #fff;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	.info{
+		padding-top: 50px;
+		h3{
+			font-family: $font-family-sans-serif;
+			font-style: italic;
+		}
+	}
+}
+.sep{
+	background: $brand-primary-color;
+	color: #fff;
+	min-height: 100px;
+	padding-top: 30px;
+	.morebtn{
+		text-align: right;
+	}
+}
+.homepage-content{
+	background: #fff;
+	padding-top: 50px;
+	h2{
+		text-align: center;
+	}
+	.features{
+		float: none;
+		margin: 0 auto;
+		.feature{
+			text-align: center;
+			min-height: 336px;
+			i{
+				font-size: 150px;
+				color: $brand-primary-color;
+				margin-top: 20px;
+			}
+			h4{
+				margin-top: 20px;
+			}
+			p{
+				text-align: left;
+			}
+		}
+	}
+}
+/** Docs */
+.docs-content{
+	background: #fff;
+	padding: 20px;
+	.content{
+		border-left: 1px solid $brand-primary-color;
+		min-height: 80vh;
+	}
+}
+.docs-nav{
+	ul{
+		li{
+			list-style: none;
+			padding: 10px;
+			margin-top: 5px;
+			margin-bottom: 5px;
+			&:hover{
+				background: #eee;
+			}
+			&:before{
+				font: normal normal normal 14px/1 FontAwesome;
+    			font-size: inherit;
+    			text-rendering: auto;
+    			-webkit-font-smoothing: antialiased;
+    			-moz-osx-font-smoothing: grayscale;
+    			content: '\f054';
+    			color: $brand-primary-color;
+    			margin-right:20px; 
+			}
+		}
+	}
+}
+/** Footer */
+footer{
+	background: $brand-primary-color;
+	min-height: 300px;
+	color: #fff;
+	padding-top: 30px;
+	a{
+		color: #fff;
+	}
+	.brand-footer{
+		max-width: 200px;
+		display: block;
+	}
+	.footer-links{
+		a{
+			display: block;
+			color: #fff;
+		}
+	}
+	.social-icons{
+		h3{
+			font-family: $font-family-sans-serif;
+			font-style: italic;
+		}
+	}
+	.resp-sharing-button {
+	  display: inline-block;
+	  border-radius: 5px;
+	  border-width: 1px;
+	  border-style: solid;
+	  transition: background-color 25ms ease-out, border-color 25ms ease-out, opacity 250ms ease-out;
+	  margin: 0.5em;
+	  padding: 0.5em 0.75em;
+	  font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+	  a {
+	    text-decoration: none;
+	    color: #FFF;
+	    display: block;
+	  }
+	}
+
+	.resp-sharing-button__icon {
+	  display: inline-block;
+	  svg {
+	    width: 1em;
+	    height: 1em;
+	    margin-bottom: -0.1em;
+	  }
+	  stroke: #FFF;
+	  fill: none;
+	}
+	.resp-sharing-button__icon--solid, .resp-sharing-button__icon--solidcircle {
+	  fill: #FFF;
+	  stroke: none;
+	}
+
+	.resp-sharing-button__link {
+	  text-decoration: none;
+	  color: #FFF;
+	}
+
+	.resp-sharing-button--large .resp-sharing-button__icon svg {
+	  padding-right: 0.4em;
+	}
+
+	.resp-sharing-button__wrapper {
+	  display: inline-block;
+	}
+
+	.resp-sharing-button--facebook {
+	  background-color: #3b5998;
+	  border-color: #3b5998;
+	  &:hover, &:active {
+	    background-color: #2d4373;
+	    border-color: #2d4373;
+	  }
+	}
+
+	.resp-sharing-button--twitter {
+	  background-color: #55acee;
+	  border-color: #55acee;
+	  &:hover, &:active {
+	    background-color: #2795e9;
+	    border-color: #2795e9;
+	  }
+	}
+
+	.resp-sharing-button--google {
+	  background-color: #dd4b39;
+	  border-color: #dd4b39;
+	  &:hover, &:active {
+	    background-color: #c23321;
+	    border-color: #c23321;
+	  }
+	}
+
+	.resp-sharing-button--email {
+	  background-color: #444444;
+	  border-color: #444444;
+	  &:hover .resp-sharing-button--email:active {
+	    background-color: #2B2B2B;
+	    border-color: #2B2B2B;
+	  }
+	}
+}

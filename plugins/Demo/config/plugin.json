@@ -1,0 +1,16 @@
+[
+	{
+		"name": "Demo",
+		"folder_name": "Demo",
+		"author": "Mahmood Rahimi",
+		"author_url": "http://loc.icingcms.org/",
+		"description": "Basic Demo plugin that you can reuse to bulid your own plugin.",
+		"image": "http://paramwebeek.com/wp-content/uploads/2013/09/demo.png",
+		"url": "http://loc.icingcms.org/plugins/Demo.zip",
+		"created": "06/14/2016",
+		"version": "1.0.0",
+		"compatible": true,
+		"cakeversion": "3.0~"
+
+	}
+]

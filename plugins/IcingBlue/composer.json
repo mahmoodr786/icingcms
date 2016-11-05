@@ -1,0 +1,21 @@
+{
+    "name": "your-name-here/IcingBlue",
+    "description": "IcingBlue plugin for CakePHP",
+    "type": "cakephp-plugin",
+    "require": {
+        "php": ">=5.4.16"
+    },
+    "require-dev": {
+    },
+    "autoload": {
+        "psr-4": {
+            "IcingBlue\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "IcingBlue\\Test\\": "tests",
+            "Cake\\Test\\": "./vendor/cakephp/cakephp/tests"
+        }
+    }
+}

@@ -1,0 +1,83 @@
+{
+    "name": "cakephp/app",
+    "description": "CakePHP skeleton app",
+    "homepage": "http://cakephp.org",
+    "type": "project",
+    "license": "MIT",
+    "require": {
+        "php": ">=5.5.9",
+        "cakephp/cakephp": "3.3.*",
+        "mobiledetect/mobiledetectlib": "2.*",
+        "cakephp/migrations": "~1.0",
+        "cakephp/plugin-installer": "*"
+    },
+    "require-dev": {
+        "psy/psysh": "@stable",
+        "cakephp/debug_kit": "~3.2",
+        "cakephp/bake": "~1.1"
+    },
+    "suggest": {
+        "markstory/asset_compress": "An asset compression plugin which provides file concatenation and a flexible filter system for preprocessing and minification.",
+        "phpunit/phpunit": "Allows automated tests to be run without system-wide install.",
+        "cakephp/cakephp-codesniffer": "Allows to check the code against the coding standards used in CakePHP."
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src",
+            "ContentManager\\": "./plugins/ContentManager/src",
+            "FileManager\\": "./plugins/FileManager/src",
+            "IcingManager\\": "./plugins/IcingManager/src",
+            "UserManager\\": "./plugins/UserManager/src",
+            "MenuManager\\": "./plugins/MenuManager/src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "App\\Test\\": "tests",
+            "Cake\\Test\\": "./vendor/cakephp/cakephp/tests",
+            "ContentManager\\Test\\": "./plugins/ContentManager/tests",
+            "FileManager\\Test\\": "./plugins/FileManager/tests",
+            "IcingManager\\Test\\": "./plugins/IcingManager/tests",
+            "UserManager\\Test\\": "./plugins/UserManager/tests",
+            "MenuManager\\Test\\": "./plugins/MenuManager/tests"
+        }
+    },
+    "scripts": {
+        "post-install-cmd": "App\\Console\\Installer::postInstall",
+        "post-create-project-cmd": "App\\Console\\Installer::postInstall",
+        "post-autoload-dump": [
+            "Cake\\Composer\\Installer\\PluginInstaller::postAutoloadDump",
+            "App\\Console\\Installer::postInstall"
+        ],
+        "check": [
+            "@cs-check",
+            "@test"
+        ],
+        "cs-check": "vendor/bin/phpcs --colors -p --standard=vendor/cakephp/cakephp-codesniffer/CakePHP ./src ./tests",
+        "cs-fix": "vendor/bin/phpcbf --colors --standard=vendor/cakephp/cakephp-codesniffer/CakePHP ./src ./tests",
+        "test": "vendor/bin/phpunit --colors=always",
+        "@icingup": [
+            "chmod 755 webroot/uploads",
+            "chmod 755 plugins",
+            "chmod 755 plugins/IcingManager/config/pluginLoad.json",
+            "chmod 755 plugins/IcingManager/config/themeLoad.json",
+            "cd plugins/FileManager && composer install",
+            "cd plugins/Demo && composer install",
+            "cd plugins/IcingBlue && composer install",
+            "cd plugins/IcingRed && composer install",
+            "bin/cake migrations migrate --plugin ContentManager",
+            "bin/cake migrations migrate --plugin IcingManager",
+            "bin/cake migrations migrate --plugin MenuManager",
+            "bin/cake migrations migrate --plugin UserManager",
+            "bin/cake migrations seed --plugin ContentManager",
+            "bin/cake migrations seed --plugin IcingManager",
+            "bin/cake migrations seed --plugin MenuManager",
+            "bin/cake migrations seed --plugin UserManager",
+            "echo 'To create a Admin User:'",
+            "echo 'run $ bin/cake icingcms adminuser'"
+        ]
+    },
+    "minimum-stability": "beta",
+    "prefer-stable": true
+}
+

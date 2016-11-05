@@ -1,0 +1,1 @@
+<a href="<?= $this->Url->build($link, true);?>">Click here</a> to reset your password.

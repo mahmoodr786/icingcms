@@ -1,0 +1,21 @@
+{
+    "name": "IcingCMS/MenuManager",
+    "description": "MenuManager plugin for CakePHP",
+    "type": "cakephp-plugin",
+    "require": {
+        "php": ">=5.4.16",
+    },
+    "require-dev": {
+    },
+    "autoload": {
+        "psr-4": {
+            "MenuManager\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "MenuManager\\Test\\": "tests",
+            "Cake\\Test\\": "./vendor/cakephp/cakephp/tests"
+        }
+    }
+}

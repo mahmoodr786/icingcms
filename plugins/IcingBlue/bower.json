@@ -1,0 +1,29 @@
+{
+  "name": "IcingBlue",
+  "description": "IcingBlue Theme",
+  "main": "index.js",
+  "authors": [
+    "Mahmood Rahimi"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "CakePHP",
+    "IcingCMS"
+  ],
+  "moduleType": [
+    "node"
+  ],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "bootstrap-sass-official#^3.3.6",
+    "font-awesome": "fontawesome#^4.5.0"
+  }
+}
