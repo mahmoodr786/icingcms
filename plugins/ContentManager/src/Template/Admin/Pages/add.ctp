@@ -30,6 +30,8 @@
                             ]
                         );
                     ?>
+                    <?= $this->Form->input('url', ['type' => 'hidden', 'value' => '----']);  ?>
+                    <?= $this->Form->input('status', ['type' => 'hidden', 'value' => '0']);  ?>
                     <div class="clearfix"></div>
                     <button type="submit" class="btn btn-success"><i class="fa fa-floppy-o" aria-hidden="true"></i> Save</button>
                 </div>
