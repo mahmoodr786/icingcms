@@ -24,7 +24,7 @@ use Cake\Utility\Inflector;
                 '<i class="fa fa-files-o" aria-hidden="true"></i> Choose File','#filemanager',
                 [
                     'class' =>'btn btn-primary filemanager pull-right',
-                    'iframe' => $this->Url->build('/admin/file-manager/files?iframe=1'),
+                    'iframe' => $this->Url->build(['plugin' => 'FileManager', 'controller' => 'files', 'action' => 'index']) . '?iframe=1',
                     'data-id' => Inflector::slug('img_url'),
                     'data-base-path' => $this->Url->build('/'),
                     'escape' =>false

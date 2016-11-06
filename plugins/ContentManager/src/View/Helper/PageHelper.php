@@ -71,7 +71,7 @@ class PageHelper extends Helper
                         '<i class="fa fa-files-o" aria-hidden="true"></i> Choose File', '#filemanager',
                         [
                             'class' => 'btn btn-primary filemanager pull-right',
-                            'iframe' => $this->Url->build('/file-manager/admin/files?iframe=1'),
+                            'iframe' => $this->Url->build(['plugin' => 'FileManager', 'controller' => 'files', 'action' => 'index']) . '?iframe=1',
                             'data-id' => Inflector::slug(strtolower($key)),
                             'data-base-path' => $this->Url->build('/'),
                             'escape' => false,
@@ -89,7 +89,7 @@ class PageHelper extends Helper
                     $options['escape'] = false;
                     $options['class'] = 'richeditor ' . $options['class'];
                     $options['type'] = 'textarea';
-                    $options['data-filemanager'] = $this->Url->build('/admin/file-manager/files?iframe=1');
+                    $options['data-filemanager'] = $this->Url->build(['plugin' => 'FileManager', 'controller' => 'files', 'action' => 'index']) . '?iframe=1';
                     $this->form .= $this->Form->input($key, $options);
                     break;
                 case 'radio':
