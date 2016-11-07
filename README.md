@@ -31,5 +31,5 @@ bin/cake server
 
 That is it. Go to http://localhost:port/admin and login.
 
-More installation info: [IcingCMS.org](https://icingcms.org/)
+More installation info: [IcingCMS.org](https://icingcms.org/documentation/setup)
 
