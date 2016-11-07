@@ -1,9 +1,9 @@
-# IcingCMS: A CakePHP 3 Content Management System
+# [IcingCMS](https://icingcms.org/): A [CakePHP](http://cakephp.org) 3 Content Management System
 
 
 ## Installation
 
-1. Run `git clone https://github.com/mahmoodr786/icingcms.git`.
+ Run `git clone https://github.com/mahmoodr786/icingcms.git`.
 
 If Composer is installed globally, run
 ```bash
@@ -12,22 +12,24 @@ composer install
 Read and edit `config/app.php` and setup the 'Datasources' and any other
 configuration relevant for your application. Make sure you can connect to your database.
 
-2. Run 
+Run 
 ```bash
 composer @icingup
 ```
 
-3. Run
+Run
 ```bash
 bin/cake icingcms adminuser
 ```
 
 Create your Admin User.
 
-4. Run
+Run
 ```bash
 bin/cake server
 ```
 
-That is it. Go to http://localhost/:port/admin and login.
+That is it. Go to http://localhost:port/admin and login.
+
+More installation info: [IcingCMS.org](https://icingcms.org/)
 
