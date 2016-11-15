@@ -64,7 +64,6 @@
             "cd plugins/FileManager && composer install",
             "cd plugins/Demo && composer install",
             "cd plugins/IcingBlue && composer install",
-            "cd plugins/IcingRed && composer install",
             "bin/cake migrations migrate --plugin ContentManager",
             "bin/cake migrations migrate --plugin IcingManager",
             "bin/cake migrations migrate --plugin MenuManager",
