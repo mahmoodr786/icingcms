@@ -23,7 +23,7 @@ $globalAdminMenu['menus']['FileManager'] = [
     'name' => 'File Manager',
     'weight' => 500,
     'icon' => 'fa fa-files-o',
-    'url' => Router::url(['prefix' => 'admin', 'plugin' => 'FileManager', 'controller' => 'files', 'action' => 'index']),
+    'url' => Router::url(['prefix' => 'admin', 'plugin' => 'FileManager', 'controller' => 'files', 'action' => 'index', '_base' => false]),
     'options' => [],
     'dropdown' => false,
     'childrens' => [],

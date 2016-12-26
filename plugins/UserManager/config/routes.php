@@ -28,7 +28,7 @@ $globalAdminMenu['menus']['UserManager'] = [
     'name' => 'User Manager',
     'weight' => 600,
     'icon' => 'fa fa-users',
-    'url' => Router::url(['prefix' => 'admin', 'plugin' => 'UserManager', 'controller' => 'Users', 'action' => 'index']),
+    'url' => Router::url(['prefix' => 'admin', 'plugin' => 'UserManager', 'controller' => 'Users', 'action' => 'index', '_base' => false]),
     'options' => [
         'class' => 'dropdown-toggle',
     ],
@@ -38,14 +38,14 @@ $globalAdminMenu['menus']['UserManager'] = [
             'raw' => false,
             'rawCode' => '',
             'name' => 'Users',
-            'url' => Router::url(['prefix' => 'admin', 'plugin' => 'UserManager', 'controller' => 'Users', 'action' => 'index']),
+            'url' => Router::url(['prefix' => 'admin', 'plugin' => 'UserManager', 'controller' => 'Users', 'action' => 'index', '_base' => false]),
             'options' => [],
         ],
         [
             'raw' => false,
             'rawCode' => '',
             'name' => 'Roles',
-            'url' => Router::url(['prefix' => 'admin', 'plugin' => 'UserManager', 'controller' => 'Roles', 'action' => 'index']),
+            'url' => Router::url(['prefix' => 'admin', 'plugin' => 'UserManager', 'controller' => 'Roles', 'action' => 'index', '_base' => false]),
             'options' => [],
         ],
 
