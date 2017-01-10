@@ -1,7 +1,7 @@
 {
-    "name": "cakephp/app",
-    "description": "CakePHP skeleton app",
-    "homepage": "http://cakephp.org",
+    "name": "mahmoodr786/icingcms",
+    "description": "A CakePHP 3 Content Management System",
+    "homepage": "https://icingcms.org",
     "type": "project",
     "license": "MIT",
     "require": {
