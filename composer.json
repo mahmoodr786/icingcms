@@ -43,7 +43,6 @@
         }
     },
     "scripts": {
-        "post-install-cmd": "App\\Console\\Installer::postInstall",
         "post-create-project-cmd": "App\\Console\\Installer::postInstall",
         "post-autoload-dump": [
             "Cake\\Composer\\Installer\\PluginInstaller::postAutoloadDump",
@@ -76,7 +75,7 @@
             "echo 'run $ bin/cake icingcms adminuser'"
         ]
     },
-    "minimum-stability": "dev",
+    "minimum-stability": "bata",
     "prefer-stable": true
 }
 
