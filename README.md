@@ -3,12 +3,8 @@
 
 ## Installation
 
- Run `git clone https://github.com/mahmoodr786/icingcms.git`.
+Run `composer create-project --prefer-dist mahmoodr786/icingcms my_app_name`.
 
-If Composer is installed globally, run
-```bash
-composer install
-```
 Read and edit `config/app.php` and setup the 'Datasources' and any other
 configuration relevant for your application. Make sure you can connect to your database.
 
