@@ -43,18 +43,16 @@
         }
     },
     "scripts": {
+        "post-install-cmd": "App\\Console\\Installer::postInstall",
         "post-create-project-cmd": "App\\Console\\Installer::postInstall",
-        "post-autoload-dump": [
-            "Cake\\Composer\\Installer\\PluginInstaller::postAutoloadDump",
-            "App\\Console\\Installer::postInstall"
-        ],
+        "post-autoload-dump": "Cake\\Composer\\Installer\\PluginInstaller::postAutoloadDump",
         "check": [
-            "@cs-check",
-            "@test"
+            "@test",
+            "@cs-check"
         ],
-        "cs-check": "vendor/bin/phpcs --colors -p --standard=vendor/cakephp/cakephp-codesniffer/CakePHP ./src ./tests",
-        "cs-fix": "vendor/bin/phpcbf --colors --standard=vendor/cakephp/cakephp-codesniffer/CakePHP ./src ./tests",
-        "test": "vendor/bin/phpunit --colors=always",
+        "cs-check": "phpcs --colors -p --standard=vendor/cakephp/cakephp-codesniffer/CakePHP ./src ./tests",
+        "cs-fix": "phpcbf --colors --standard=vendor/cakephp/cakephp-codesniffer/CakePHP ./src ./tests",
+        "test": "phpunit --colors=always",
         "@icingup": [
             "chmod 755 webroot/uploads",
             "chmod 755 plugins",
