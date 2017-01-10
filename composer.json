@@ -75,7 +75,7 @@
             "echo 'run $ bin/cake icingcms adminuser'"
         ]
     },
-    "minimum-stability": "bata",
+    "minimum-stability": "beta",
     "prefer-stable": true
 }
 
